@@ -1,6 +1,7 @@
 var isPlaying = false;
 var points = 0;
 var audio = new Audio('sounds/security.mp3');
+var stopTimer;
 
 document.getElementById("startButton").addEventListener("click", function() {
 
@@ -19,7 +20,7 @@ document.getElementById("startButton").addEventListener("click", function() {
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     isPlaying = true;
-    var stopTimer= setInterval(function () {
+    stopTimer = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -60,3 +61,19 @@ function results(){
     points++;
   }
 }
+
+document.getElementById("finishButton").addEventListener("click", function() {
+
+  clearInterval(stopTimer);
+  results();
+  var clearQuiz = document.getElementsByClassName("question");
+  for(var i = 0; i < clearQuiz.length; i++){
+    clearQuiz[i].checked = false;
+  }
+
+  isPlaying = false;
+  document.querySelector('#timer').innerHTML = "<h1>Πόντοι: " + points + "</h1><p>Αυτό ήταν!!! όταν είναι έτοιμος ο επόμενος παίκτης μπορεί να πατήσει το κουμπί.</p>";
+  document.getElementById("questions").style.display = "none";
+  points = 0;
+
+});
