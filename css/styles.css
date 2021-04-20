@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+  text-align: center;
+  color: green;
+}
+
+
+.new5 {
+  border: 10px solid green;
+  border-radius: 5px;
+}
+
+h1 {
+  margin-top: 2%;
+}
+
+.help-button {
+  background-color: green;
+  margin-left: 2%;
+}
+
+.hide-questions {
+  display: none;
+}
+
+#timer {
+  margin-bottom: 4%;
+}
