@@ -1,6 +1,6 @@
 var isPlaying = false;
 var points = 0;
-var audio = new Audio('security.mp3');
+var audio = new Audio('sounds/security.mp3');
 
 document.getElementById("startButton").addEventListener("click", function() {
 
