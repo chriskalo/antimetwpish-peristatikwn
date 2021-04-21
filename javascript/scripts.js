@@ -6,8 +6,8 @@ var stopTimer;
 document.getElementById("startButton").addEventListener("click", function() {
 
   if (isPlaying == false){
-    var threeMinutes = 60 * 1, display = document.querySelector('#timer');
-    display.innerHTML = "<h1>01:00</h1>";
+    var threeMinutes = 60 * 2, display = document.querySelector('#timer');
+    display.innerHTML = "<h1>02:00</h1>";
     startTimer(threeMinutes, display);
     // setTimeout(function(){ document.getElementById("questions").style.display = "block"; }, 1000);
     document.getElementById("questions").style.display = "block";
@@ -42,7 +42,7 @@ function startTimer(duration, display) {
             }
 
             isPlaying = false;
-            display.innerHTML = "<h1>Πόντοι: " + points + "/12</h1><p>Αυτό ήταν!!! όταν είναι έτοιμος ο επόμενος παίκτης μπορεί να πατήσει το κουμπί.</p>";
+            display.innerHTML = "<h1>Πόντοι: " + points + "/12</h1><p>Αυτό ήταν!!! Όταν είναι έτοιμος ο επόμενος παίκτης μπορεί να πατήσει το κουμπί.</p>";
             document.getElementById("questions").style.display = "none";
             points = 0;
         }
@@ -112,7 +112,7 @@ document.getElementById("finishButton").addEventListener("click", function() {
   }
 
   isPlaying = false;
-  document.querySelector('#timer').innerHTML = "<h1>Πόντοι: " + points + "/12</h1><p>Αυτό ήταν!!! όταν είναι έτοιμος ο επόμενος παίκτης μπορεί να πατήσει το κουμπί.</p>";
+  document.querySelector('#timer').innerHTML = "<h1>Πόντοι: " + points + "/12</h1><p>Αυτό ήταν!!! Όταν είναι έτοιμος ο επόμενος παίκτης μπορεί να πατήσει το κουμπί.</p>";
   document.getElementById("questions").style.display = "none";
   points = 0;
 
